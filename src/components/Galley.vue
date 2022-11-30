@@ -1,7 +1,7 @@
 <template>
     <div>
         
-
+ 
         <div class="utama">
             <div class="d-flex p-5 my-5">
                 <div class="d-flex flex-column justify-content-around" style="width: 98px; height: auto;">
@@ -13,7 +13,7 @@
                 </div>
             </div>
              <div class="p-4">
-            <img src="../assets/chair.png" alt="bangku" width="450px" height="auto">   
+            <img  :src="require('@/assets/'+iniImg +'.png')" alt="bangku" width="450px" height="auto">   
              </div>
 
              <div class="text">
@@ -40,9 +40,7 @@
 <script>
 export default {
     name: 'GalleyComponents',
-    props: {
-        msg: String
-    }
+    props: ['iniImg']
 };
 </script>
 

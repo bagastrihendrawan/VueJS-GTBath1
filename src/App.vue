@@ -2,12 +2,12 @@
   <div id="app">
     <Navbar></Navbar>
     <Breadcrumb></Breadcrumb>
-    <Galley></Galley>
-    <Slider></Slider>
+    <Galley :iniImg="iniCard"></Galley>
+    <Slider @gantiGambar="iniGambar"></Slider>
     <Footerr></Footerr>
     <Copyright></Copyright>
 
-  </div>
+  </div> 
 </template>
 
 <script>
@@ -28,6 +28,17 @@ export default {
     Copyright,
 
   
+  },
+  methods:{
+    iniGambar:function(cardGambar){
+      this.iniCard=cardGambar
+    }
+  },
+  data(){
+    return{
+
+      iniCard:'chair'
+    }
   }
 };
 </script>
